@@ -18,7 +18,7 @@ return new class extends Migration
             $table->dateTime('start');
             $table->dateTime('end');
             //$table->enum('direction', ['east', 'west', 'far', 'free'])->default('Free');
-            $table->timestamps();
+
 
             $table->foreign('school_id')->references('id')->on('schools')->onDelete('cascade');
             $table->foreign('employee_id')->references('id')->on('employees')->onDelete('cascade');
